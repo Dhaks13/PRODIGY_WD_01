@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+body[class="day"]{
+    background-color: rgba(213, 246, 235, .9);
+}
+
+
+body[class="night"]{
+    background-color: #2a2a2a;
+}
+
+
+.nav
+{
+    top: 0;
+    left: 0;    
+    height: 8rem;
+    width: 100%;
+    display: inline-flex;
+    position: fixed;
+    border-bottom: 1px #2a2a2a solid;
+}
+
+.day .nav{
+    background: linear-gradient(90deg , #111111 1%,#81e4c4 );
+}
+
+
+.night .nav{
+    background: linear-gradient(90deg ,#81e4c4 1%,  #111111 );
+}
+
+.nav #logo
+{
+    margin: .5rem;
+    padding: .5rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 30%;
+    position: fixed;
+}
+
+
+.menu{
+    margin-right: 1rem;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.nav li, .nav a{
+    display: inline;
+    text-decoration: none;
+    font: 1em  sans-serif ;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 5%;
+
+}
+
+.day .nav a{
+    background-color: #111111;
+    color: #81e4c4;
+}
+
+
+.night .nav a{
+    background-color: #81e4c4;
+    color: #111111;
+}
+
+.nav button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 20%;
+    margin: .5rem;
+    padding: .1rem;
+    cursor: pointer;
+}
+
+.day .nav button{
+background-color: #111111;
+}
+
+
+.night .nav button{
+    background-color: #81e4c4;
+    }
+    
+
+.day .menu a:hover, .day .menu button:hover{
+    color: #111111;
+    background-color: #81e4c4;
+}
+
+
+.night .menu a:hover, .day .menu button:hover{
+    color: #81e4c4;
+    background-color: #111111;
+}
+
+
+ .theme img{
+width: 100% ;
+height: 100%;
+margin: -.4rem;
+}
+
+
+footer{
+    background-color: #2a2a2a;
+    color: white;
+    font: .85rem sans-serif;
+    position: fixed;
+    overflow: hidden;
+    align-items: center;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+footer a{
+    cursor: pointer;
+    background-color: #2a2a2a;
+    color: lightskyblue;
+}
