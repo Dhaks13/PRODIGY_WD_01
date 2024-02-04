@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    user-select: none;
 }
 
 html{
@@ -138,12 +138,12 @@ margin: -.4rem;
 main
 {
     margin: 10rem  8rem;
-    display: flex;
+    display: block;
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: max-content;
-    width: 80vmax;
+    height:fit-content;
+    width: 90%;
     -ms-overflow-style: none;
     scrollbar-width: none;  
 
@@ -163,7 +163,7 @@ main
 
 .day .home
 {
-    background-color: #111111;
+    background-color: #2a2a2a;
 }
 
 .home .image, .image img{
@@ -197,6 +197,145 @@ main
 .day .content .desc,.day .content .tagline{
     color: #abedd8;
 }
+
+main .about{
+    display: inline-flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+main .about div h3, main .about div p{
+    margin: 1rem;
+    padding: .5rem;
+}
+
+main .about div{
+    margin: 1rem;
+    border: #2a2a2a 0.5px solid;
+    border-radius: 5%;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
+}
+
+.night main .about div{
+    background:color-mix(in srgb, transparent 50%, #81e4c4 50%) ;
+}
+
+.night main .about div:hover{
+    background: #81e4c4  ;
+}
+
+
+.day main .about div{
+    background:color-mix(in srgb, transparent 50%, #111111 50%) ;
+}
+
+.day main .about div:hover{
+    background: #2a2a2a;
+    color: #81e4c4;
+}
+
+
+main .about div img{
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+
+}
+
+
+main .signup {
+
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: 1rem 0 1rem -1rem;
+}
+
+.night main .signup h1{
+    color: #81e4c4;
+}
+
+.day main .signup h1{
+    color: #2a2a2a;
+}
+
+main .signup input {
+    background-color: transparent;
+    border: 1px #abedd8 thin;
+    border-radius: 25px; 
+    margin: 1rem;
+    padding: 0.5rem;
+    height: 10%;
+    width: 50%;
+}
+
+.night main .signup input {
+    color: #81e4c4;;
+}
+
+.day main .signup input {
+    color: #111111;
+}
+
+main .signup button {
+    border-radius: 10%;
+    cursor: pointer;
+    width: 10%;
+    height: 10%;
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.night main .signup button {
+    background-color: #81e4c4;
+    border: 1px #abedd8 thin;
+    color: #111111;
+}
+
+
+
+.night main .signup button:hover {
+    background-color: #111111;
+    border: 1px #2a2a2a thin;
+    color: #81e4c4;
+
+}
+
+
+.day main .signup button:hover {
+    background-color: #81e4c4;
+    border: 1px #abedd8 thin;
+    color: #111111;
+}
+
+
+
+.day main .signup button {
+    background-color: #111111;
+    border: 1px #2a2a2a thin;
+    color: #81e4c4;
+
+}
+
+main .contact{
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+}
+
+.night main .contact{
+    background-color: #81e4c4;
+    color: #2a2a2a;
+}
+
+.day main .contact{
+    color: #81e4c4;
+    background-color: #2a2a2a;
+}
+
 
 footer{
     background-color: #2a2a2a;
@@ -296,7 +435,7 @@ footer a{
     h1{
     padding: .5rem;
     display: inline;
-    font: 1.5em sans-serif;
+    font: 1.2em sans-serif;
     }
 
     .nav h1{
@@ -306,9 +445,12 @@ footer a{
 
 
     .nav li,.nav a{
-        margin: 0 1rem;
-        width: 80%;
-        text-align: center;
+        margin: 0 4rem;
+        width: 50%;
+    }
+
+    .nav button{
+        margin: .5rem 6rem;
     }
 
     .menu{
@@ -323,7 +465,7 @@ footer a{
     .nav li, .nav a, .content a{
         display: block;
         text-decoration: none;
-        font: .9em  sans-serif ;
+        font: .8em  sans-serif ;
         height: 2.5rem;
     }
 
@@ -332,21 +474,42 @@ footer a{
         width: 100%;
         position: relative;
         margin: 1rem  0.2rem 1rem 0;
+        font: .8em sans-serif;
     }
 
+    .content{
+        font: .8em sans-serif;
+    }
+
+    .content .tagline{
+        padding-left: 2rem;
+        margin-top: 0rem;
+        padding-top: 0;
+    }
+    
     .home{
         display: block;
     }
 
     .home .image, .image img{
-        width: 25rem;
-        height: 20rem;
+        width: 20rem;
+        height: 15rem;
     }
 
     
     .content a{
         align-self: center;
-        width: 7rem;
+        width: 4rem;
+        height: 2rem;
     }
+
+    
+main .about{
+    display: block;
+}
+
+main .about div{
+    border-radius: 1%;
+}
 
 }
