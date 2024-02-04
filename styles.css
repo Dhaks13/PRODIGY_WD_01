@@ -1,5 +1,12 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+html{
+    overflow-y: scroll;
+    scrollbar-width: none;  
 }
 
 body[class="day"]{
@@ -21,6 +28,7 @@ body[class="night"]{
     display: inline-flex;
     position: fixed;
     border-bottom: 1px #2a2a2a solid;
+    z-index:1; 
 }
 
 .day .nav{
@@ -39,9 +47,22 @@ body[class="night"]{
     width: 7rem;
     height: 7rem;
     border-radius: 30%;
-    position: fixed;
 }
 
+h1{
+    margin: .5rem;
+    padding: .5rem;
+    align-self: center;
+    font: 2em sans-serif;
+}
+
+.night h1{
+    color: #111111;
+}
+
+.day h1{
+    color: #81e4c4;
+}
 
 .menu{
     margin-right: 1rem;
@@ -51,7 +72,7 @@ body[class="night"]{
     
 }
 
-.nav li, .nav a{
+.nav li, .nav a, .content a{
     display: inline;
     text-decoration: none;
     font: 1em  sans-serif ;
@@ -61,16 +82,18 @@ body[class="night"]{
     padding: .5rem;
     cursor: pointer;
     border-radius: 5%;
-
+}
+.nav a, .content a{
+    border: 1px #2a2a2a solid;
 }
 
-.day .nav a{
+.day .nav a, .night .content a{
     background-color: #111111;
     color: #81e4c4;
 }
 
 
-.night .nav a{
+.night .nav a, .day .content a{
     background-color: #81e4c4;
     color: #111111;
 }
@@ -94,13 +117,13 @@ background-color: #111111;
     }
     
 
-.day .menu a:hover, .day .menu button:hover{
+.day .menu a:hover, .day .menu button:hover , .night .content a:hover{
     color: #111111;
     background-color: #81e4c4;
 }
 
 
-.night .menu a:hover, .day .menu button:hover{
+.night .menu a:hover, .night .menu button:hover, .day .content a:hover{
     color: #81e4c4;
     background-color: #111111;
 }
@@ -112,6 +135,68 @@ height: 100%;
 margin: -.4rem;
 }
 
+main
+{
+    margin: 10rem  8rem;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: max-content;
+    width: 80vmax;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+
+}
+
+.home{
+    display: flex;
+    width: 100%;
+    min-height: 35rem;
+    position: relative;
+    border-radius: 1%;
+}
+
+.night .home{
+    background-color: #abedd8;
+}
+
+.day .home
+{
+    background-color: #111111;
+}
+
+.home .image, .image img{
+    margin: .5rem;
+    padding: .5rem;
+    width: 30rem;
+    height: 25rem;
+    position: relative;
+    margin: auto;
+}
+
+.home .content{
+    margin: 5rem;
+    padding: .5rem;
+}
+
+.content .tagline{
+    font: .6em sans-serif;
+    padding-left: 3rem;
+    margin-top: -.3rem;
+    padding-top: 0;
+}
+
+
+.content .desc{
+    font: 1em sans-serif;
+    margin: .3rem;
+    padding: .3rem;
+}
+
+.day .content .desc,.day .content .tagline{
+    color: #abedd8;
+}
 
 footer{
     background-color: #2a2a2a;
@@ -121,6 +206,7 @@ footer{
     overflow: hidden;
     align-items: center;
     bottom: 0;
+    right: 0%;
     margin: 0 auto;
 }
 
@@ -128,4 +214,139 @@ footer a{
     cursor: pointer;
     background-color: #2a2a2a;
     color: lightskyblue;
+}
+
+@media (max-width: 1100px) and (min-width: 750px) {
+    html{
+        overflow-y: scroll;
+        scrollbar-width: none;  
+    }
+    .nav{
+        top: 0;
+        left: 0;
+        position: fixed;   
+        z-index:1; 
+
+    }
+    .nav li, .nav a{
+        display: inline-flex;
+        width: 4rem;
+        height: 2.5rem;
+    }
+
+    .nav li{
+        margin: -.5rem;
+        font: .7em sans-serif;
+        text-align: justify;
+    }
+
+    
+    
+    main{
+        position: relative;    
+        display: block;
+        overflow-y: scroll;
+        margin: 9rem  3rem;
+    }
+
+
+
+    .home{
+        display: block;
+        width: 100%;
+        min-height: 50rem;
+        position: relative;
+        border-radius: 1%;
+    }
+    
+    .home .image, .image img{
+        width: 20rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 750px) {
+    html{
+        overflow-y: scroll;
+        scrollbar-width: none;  
+    }
+
+    .nav{
+        height: 50rem;
+        width: 100%;
+        display: block;
+        position: relative;    
+        align-content: center;
+
+    }
+
+
+    
+    .nav #logo
+    {
+
+        margin: 5rem 8rem 1rem ;
+        padding: .5rem;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 10%;
+    }
+
+    
+    h1{
+    padding: .5rem;
+    display: inline;
+    font: 1.5em sans-serif;
+    }
+
+    .nav h1{
+        margin: 1rem 8rem;
+
+    }
+
+
+    .nav li,.nav a{
+        margin: 0 1rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .menu{
+        margin-top: 3rem;
+    }
+
+    .nav a{
+        margin-top: 1rem   ;
+    }
+
+
+    .nav li, .nav a, .content a{
+        display: block;
+        text-decoration: none;
+        font: .9em  sans-serif ;
+        height: 2.5rem;
+    }
+
+
+    main{
+        width: 100%;
+        position: relative;
+        margin: 1rem  0.2rem 1rem 0;
+    }
+
+    .home{
+        display: block;
+    }
+
+    .home .image, .image img{
+        width: 25rem;
+        height: 20rem;
+    }
+
+    
+    .content a{
+        align-self: center;
+        width: 7rem;
+    }
+
 }
