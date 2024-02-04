@@ -5,24 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" type="image/png" href="img/logo.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <title>Agri Indeed | Nurturing Growth | Cultivating Innovation</title>
         <script src="scripts.js"></script>
     </head>
-    <body class="night">
+    <body class="night" onload="test()">
         <div class="nav">
+            <button id="nav-button" class="nav-button" onclick="ToggleMenu()"><i class="fa-solid fa-bars"></i></button>
             <div class="logo">
                 <img name="logo" id="logo" src="img/logo.png" alt="logo" />
             </div>
             <h1 class="title">Agri Indeed</h1>
             <div class="menu">
-                <ul>
-                    <a name="home" href="#home"><li>HOME</li></a>
-                    <a name="about" href="#about"><li>ABOUT</li></a>
-                    <a name="signup" href="#signup"><li>SIGN-UP</li></a>
-                    <a name="contact" href="#contact"><li>CONTACT</li></a>
-                    <button class="theme" onclick="ToggleTheme()"><img  id="theme" name="theme" src="img/night.png" /></button>
+                <ul class="menu-items">
+                    <a name="home" onclick="ToggleMenu()" href="#home"><li>HOME</li></a>
+                    <a name="about"   onclick="ToggleMenu()" href="#about"><li>ABOUT</li></a>
+                    <a name="signup" onclick="ToggleMenu()" href="#signup"><li>SERVICES</li></a>
+                    <a name="contact"  onclick="ToggleMenu()" href="#contact"><li>CONTACT</li></a>
                 </ul>
             </div>
+            <button class="theme" onclick="ToggleTheme()"><img  id="theme" name="theme" src="img/night.png" /></button>
         </div>
         </header>
         <main>
@@ -40,7 +42,7 @@
                         Join us as we embark on a journey to shape tomorrow's agricultural landscape, one seed at a time.
                     </p>
                     <br>
-                    <a name="signup" href="#signup">SIGN UP</a>
+                    <a name="signup" href="#signup">SERVICES</a>
                 </div>
             </section>
             <section id="about" class="about">

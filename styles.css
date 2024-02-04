@@ -18,7 +18,6 @@ body[class="night"]{
     background-color: #2a2a2a;
 }
 
-
 .nav
 {
     top: 0;
@@ -30,6 +29,37 @@ body[class="night"]{
     border-bottom: 1px #2a2a2a solid;
     z-index:1; 
 }
+
+.nav button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 20%;
+    top: .1rem;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.nav-button{
+    left: .1rem;
+    display: none;
+}
+
+
+.nav button[class="theme"]{
+    top: .1rem;
+    right: .2rem;
+    display: block;
+}
+
+.nav-button img{
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
 
 .day .nav{
     background: linear-gradient(90deg , #111111 1%,#81e4c4 );
@@ -44,6 +74,7 @@ body[class="night"]{
 {
     margin: .5rem;
     padding: .5rem;
+    margin-left: 2rem;
     width: 7rem;
     height: 7rem;
     border-radius: 30%;
@@ -98,22 +129,27 @@ h1{
     color: #111111;
 }
 
-.nav button{
+.menu button{
     width: 2rem;
     height: 2rem;
     border-radius: 20%;
     margin: .5rem;
     padding: .1rem;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
+    display: block;
+    position: fixed;
+    visibility: visible;
 }
 
 .day .nav button{
-background-color: #111111;
+background-color: #abedd8;
 }
 
 
 .night .nav button{
-    background-color: #81e4c4;
+    background-color: #abedd8;
     }
     
 
@@ -180,8 +216,12 @@ main
     padding: .5rem;
 }
 
+.home .content h1{
+    font-weight: bolder;
+}
 .content .tagline{
-    font: .6em sans-serif;
+    font: .8em sans-serif;
+    font-weight: 1 ; 
     padding-left: 3rem;
     margin-top: -.3rem;
     padding-top: 0;
@@ -189,9 +229,11 @@ main
 
 
 .content .desc{
-    font: 1em sans-serif;
+    font: 1.1em sans-serif;
     margin: .3rem;
     padding: .3rem;
+    font-weight: normal; 
+
 }
 
 .day .content .desc,.day .content .tagline{
@@ -283,7 +325,7 @@ main .signup input {
 main .signup button {
     border-radius: 10%;
     cursor: pointer;
-    width: 10%;
+    width: 5rem;
     height: 10%;
     margin: 1rem;
     padding: .5rem;
@@ -355,10 +397,11 @@ footer a{
     color: lightskyblue;
 }
 
-@media (max-width: 1100px) and (min-width: 750px) {
+@media (max-width: 1200px) and (min-width: 866px) {
     html{
         overflow-y: scroll;
-        scrollbar-width: none;  
+        scrollbar-width: none; 
+        font-size: small;
     }
     .nav{
         top: 0;
@@ -369,17 +412,21 @@ footer a{
     }
     .nav li, .nav a{
         display: inline-flex;
-        width: 4rem;
+        width: 5rem;
         height: 2.5rem;
     }
 
     .nav li{
         margin: -.5rem;
+        padding: .4rem;
         font: .7em sans-serif;
-        text-align: justify;
     }
 
-    
+    .menu{
+        display: flex;
+        visibility: visible;
+
+    }
     
     main{
         position: relative;    
@@ -404,17 +451,17 @@ footer a{
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 866px) {
     html{
         overflow-y: scroll;
         scrollbar-width: none;  
     }
 
     .nav{
-        height: 50rem;
+        height: 7rem;
         width: 100%;
-        display: block;
-        position: relative;    
+        display: flex;
+        position: fixed;    
         align-content: center;
 
     }
@@ -423,49 +470,52 @@ footer a{
     
     .nav #logo
     {
-
-        margin: 5rem 8rem 1rem ;
-        padding: .5rem;
-        width: 10rem;
-        height: 10rem;
-        border-radius: 10%;
+        width: 6.5rem;
+        height: 6.5rem;
     }
 
     
     h1{
     padding: .5rem;
     display: inline;
-    font: 1.2em sans-serif;
+    font: 1.1em sans-serif;
     }
 
     .nav h1{
-        margin: 1rem 8rem;
-
+        font: 2em sans-serif;
     }
 
 
-    .nav li,.nav a{
-        margin: 0 4rem;
-        width: 50%;
+    .nav li{
+        margin: 0;
+        text-align: center;
+        padding-left: 0rem;
     }
+
+    .nav a{
+        margin: 0;
+        width: 8rem;
+    }
+    
 
     .nav button{
-        margin: .5rem 6rem;
+        margin: .1rem;
     }
 
     .menu{
         margin-top: 3rem;
+        visibility: hidden;
     }
 
     .nav a{
-        margin-top: 1rem   ;
+        margin-top: 1rem;
     }
 
 
     .nav li, .nav a, .content a{
         display: block;
         text-decoration: none;
-        font: .8em  sans-serif ;
+        font: .9em  sans-serif ;
         height: 2.5rem;
     }
 
@@ -474,7 +524,8 @@ footer a{
         width: 100%;
         position: relative;
         margin: 1rem  0.2rem 1rem 0;
-        font: .8em sans-serif;
+        font: .9em sans-serif;
+        margin-top: 7.5rem;
     }
 
     .content{
@@ -510,6 +561,10 @@ main .about{
 
 main .about div{
     border-radius: 1%;
+}
+
+.nav-button{
+    display: block;
 }
 
 }
