@@ -14,19 +14,20 @@ function ToggleTheme(){
 }
 
 function ToggleMenu() {
-    var toggleElements = document.querySelector('.menu');
-    var adjustElement = document.querySelector('.nav');
-
-    if (toggleElements.style.visibility === 'hidden') {
-        adjustElement.style.display = 'block';
-        toggleElements.style.visibility = 'visible';
-        adjustElement.style.height = '50rem';
-        adjustElement.style.padding="4rem 8rem";
-    } else {
-        adjustElement.style.display = 'flex';
-        toggleElements.style.visibility = 'hidden';
-        adjustElement.style.height = '7rem';
-        adjustElement.style.padding="0";
+    if(isMobileView()){
+        var toggleElements = document.querySelector('.menu');
+        var adjustElement = document.querySelector('.nav');
+        if (toggleElements.style.visibility === 'hidden') {
+            adjustElement.style.display = 'block';
+            toggleElements.style.visibility = 'visible';
+            adjustElement.style.height = '50rem';
+            adjustElement.style.padding="4rem 8rem";
+        } else {
+            adjustElement.style.display = 'flex';
+            toggleElements.style.visibility = 'hidden';
+            adjustElement.style.height = '7rem';
+            adjustElement.style.padding="0";
+        }
     }
 }
 
@@ -51,16 +52,20 @@ function isMobileView() {
 }
 
 function adjustForDesktopView() {
+    var onclicks = document.querySelector('.menu-items');
     var menuButton = document.querySelector('.menu');
     var navElement = document.querySelector('.nav');
     menuButton.removeAttribute("style")
     navElement.removeAttribute("style")
+    onclicks.onclick = null;
 }
 
 
 function adjustForMobileView() {
+    var onclicks = document.querySelector('.menu-items');
     var menuButton = document.querySelector('.menu');
     var navElement = document.querySelector('.nav');
+    onclicks.onclick=ToggleMenu();
     navElement.style.display = 'flex';
     menuButton.style.visibility = 'hidden';
     navElement.style.height = '7rem';
