@@ -74,7 +74,7 @@ function adjustForMobileView() {
 
 function submit() {
     var mail = document.getElementById("email");
-    alert("Your mail ID:"+mail.value+"\nis accepted");
-    mail.value="";
-    mail.placeholder="Enter your Mailid...";
+    alert("Your mail ID: " + mail.value + "\nIs accepted");
+    mail.value = "";
+    mail.placeholder = "Enter your Mailid...";
 }
