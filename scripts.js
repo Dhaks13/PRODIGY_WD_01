@@ -21,7 +21,7 @@ function ToggleMenu() {
             adjustElement.style.display = 'block';
             toggleElements.style.visibility = 'visible';
             adjustElement.style.height = '50rem';
-            adjustElement.style.padding="5rem 5rem";
+            adjustElement.style.padding="4rem 4rem";
         } else {
             adjustElement.style.display = 'flex';
             toggleElements.style.visibility = 'hidden';
@@ -70,4 +70,11 @@ function adjustForMobileView() {
     menuButton.style.visibility = 'hidden';
     navElement.style.height = '7rem';
     navElement.style.padding="0";
+}
+
+function submit() {
+    var mail = document.getElementById("email");
+    alert("Your mail ID:"+mail.value+"\nis accepted");
+    mail.value="";
+    mail.placeholder="Enter your Mailid...";
 }
