@@ -493,12 +493,14 @@ footer a{
     .nav li{
         margin: 0;
         text-align: center;
-        padding-left: 0rem;
+        padding-left: 1rem;
+        margin-left: 1rem;
     }
 
     .nav a{
         margin: 0;
         width: 8rem;
+        margin-left: 1.5rem;
     }
     
 
