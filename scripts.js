@@ -1,18 +1,20 @@
-function ToggleTheme(){
+function ToggleTheme() {
     var body = document.querySelector('body');
     var theme = document.getElementById("theme");
+
     if (body.classList.contains('day')) {
         body.classList.remove('day');
         body.classList.add('night');
-       theme.classList.remove('fa-solid fa-sun'); theme.classList.add('fa-solid fa-moon');
+        theme.classList.remove('fa-sun');
+        theme.classList.add('fa-moon');
     } else {
         body.classList.remove('night');
         body.classList.add('day');
-        theme.classList.remove('fa-solid fa-moon');
-theme.classList.add('fa-solid fa-sun');
+        theme.classList.remove('fa-moon');
+        theme.classList.add('fa-sun');
     }
-
 }
+
 
 function ToggleMenu() {
     if(isMobileView()){

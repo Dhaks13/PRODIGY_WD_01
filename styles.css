@@ -22,6 +22,15 @@ body[class="night"]{
     background-color: #2a2a2a;
 }
 
+.day h1{
+    -webkit-text-stroke: .025rem black;
+}
+
+.night h1{
+    -webkit-text-stroke: .005rem white;
+
+}
+
 .nav
 {
     top: 0;
@@ -55,15 +64,6 @@ body[class="night"]{
     right: .2rem;
     display: block;
 }
-
-.nav-button img{
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-}
-
 
 .day .nav{
     background: linear-gradient(90deg , #111111 1%,#81e4c4 );
@@ -147,14 +147,24 @@ h1{
     visibility: visible;
 }
 
+.day .nav .b1{
+    background-color: #abedd8;
+}
+    
+    
+.night .nav .b1{
+        background-color: #2a2a2a30;
+}
+    
+
 .day .nav button{
-background-color: #abedd8;
+background-color: #abedd822;
 }
 
 
 .night .nav button{
-    background-color: #abedd8;
-    }
+    background-color: #abedd822;
+}
     
 
 .day .menu a:hover, .day .menu button:hover , .night .content a:hover{
@@ -177,7 +187,7 @@ margin: -.4rem;
 
 main
 {
-    margin: 10rem  8rem;
+    margin: 10rem  8rem 0 8rem;
     display: block;
     position: relative;
     overflow-x: hidden;
@@ -367,9 +377,35 @@ main .signup button {
 }
 
 main .contact{
-    width: 100%;
+    width: 90%;
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+}
+
+
+main .contact .content-connect h2{
+    display: block;
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+
+.content-connect a{
+    display: inline-flex;
+    margin: 0 3rem;
+    text-decoration: none;
+    margin-left: 12%;
+}
+
+
+.night .content-connect a{
+    color: black;
+}
+
+.day .content-connect a{
+    color: white;
 }
 
 .night main .contact{
@@ -384,25 +420,22 @@ main .contact{
 
 
 footer{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.658);
     color: white;
-    font: .6rem sans-serif;
+    font: .8rem sans-serif;
     position: fixed;
     overflow: hidden;
     align-items: right;
     bottom: 0;
     right: 0;
     margin: 0;
-    width: 55%
-    
+    width: 25%;
 }
 
-footer a{
+footer a, footer i{
     cursor: pointer;
-    background-color: black;
     color: white;
-align-items: right;
-  
+    margin: 0 0.25rem 0 0;
 }
 
 @media (max-width: 1200px) and (min-width: 866px) {
@@ -426,7 +459,8 @@ align-items: right;
 
     .nav li{
         margin: -.5rem;
-        padding: .4rem;
+        padding-top: .6rem;
+        padding-left: .8rem;
         font: .7em sans-serif;
     }
 
@@ -440,7 +474,7 @@ align-items: right;
         position: relative;    
         display: block;
         overflow-y: scroll;
-        margin: 9rem  3rem;
+        margin: 9rem  3rem 0 3rem;
     }
 
 
@@ -457,6 +491,17 @@ align-items: right;
         width: 20rem;
         height: 15rem;
     }
+
+    .content-connect a{
+        margin: 0rem 1.5rem;
+        margin-left: 10%;
+        }
+    
+    footer{
+        width: 35%;
+        font: 1rem sans-serif;
+    }        
+    
 }
 
 @media (max-width: 866px) {
@@ -590,6 +635,19 @@ main .about div{
 
 .nav-button{
     display: block;
+}
+
+main .contact .content-connect a{
+    margin: .51rem 38%;
+    display: flex;
+}
+
+main .contact .content-connect{
+    display: block;
+}
+
+footer{
+    width: 40%;
 }
 
 }
