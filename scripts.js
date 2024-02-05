@@ -21,7 +21,7 @@ function ToggleMenu() {
             adjustElement.style.display = 'block';
             toggleElements.style.visibility = 'visible';
             adjustElement.style.height = '50rem';
-            adjustElement.style.padding="4rem 8rem";
+            adjustElement.style.padding="4rem 3rem";
         } else {
             adjustElement.style.display = 'flex';
             toggleElements.style.visibility = 'hidden';
