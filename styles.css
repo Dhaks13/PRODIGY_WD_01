@@ -392,14 +392,17 @@ footer{
     align-items: right;
     bottom: 0;
     right: 0;
-    margin: auto 0 0 auto;
-    width: 90%
+    margin: 0;
+    width: 55%
+    
 }
 
 footer a{
     cursor: pointer;
     background-color: black;
     color: white;
+align-items: right;
+  
 }
 
 @media (max-width: 1200px) and (min-width: 866px) {
