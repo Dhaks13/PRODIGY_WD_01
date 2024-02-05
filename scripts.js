@@ -72,7 +72,7 @@ function adjustForMobileView() {
     navElement.style.padding="0";
 }
 
-function submit() {
+function submitForm() {
     var mail = document.getElementById("email");
     alert("Your mail ID: " + mail.value + "\nIs accepted");
 window.location = 'https://dhaks13.github.io/PRODIGY_WD_01/';
