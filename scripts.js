@@ -4,12 +4,12 @@ function ToggleTheme(){
     if (body.classList.contains('day')) {
         body.classList.remove('day');
         body.classList.add('night');
-       theme.classList.remove('fa-solid fa-sun-bright'); theme.classList.add('fa-duotone fa-moon-stars');
+       theme.classList.remove('fa-solid fa-sun'); theme.classList.add('fa-solid fa-moon');
     } else {
         body.classList.remove('night');
         body.classList.add('day');
-        theme.classList.remove('fa-duotone fa-moon-stars');
-theme.classList.add('fa-solid fa-sun-bright');
+        theme.classList.remove('fa-solid fa-moon');
+theme.classList.add('fa-solid fa-sun');
     }
 
 }
