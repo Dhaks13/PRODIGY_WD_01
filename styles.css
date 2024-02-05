@@ -389,10 +389,10 @@ footer{
     font: .6rem sans-serif;
     position: fixed;
     overflow: hidden;
-    align-items: center;
+    align-items: right;
     bottom: 0;
     right: 0;
-    margin: 0 auto;
+    margin: auto 0 0 auto;
     width: 90%
 }
 
