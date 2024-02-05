@@ -158,12 +158,12 @@ h1{
     
 
 .day .nav button{
-background-color: #abedd822;
+background-color: #abedd892;
 }
 
 
 .night .nav button{
-    background-color: #abedd822;
+    background-color: #abedd875;
 }
     
 
@@ -438,7 +438,7 @@ footer a, footer i{
     margin: 0 0.25rem 0 0;
 }
 
-@media (max-width: 1200px) and (min-width: 866px) {
+@media (max-width: 1080px) and (min-width: 600px) {
     html{
         overflow-y: scroll;
         scrollbar-width: none; 
@@ -487,9 +487,22 @@ footer a, footer i{
         border-radius: 1%;
     }
     
+    
+    .content .title{
+        margin-top: -5rem;        
+    }
+
+    .content .tagline{
+        margin: -1rem .5rem;
+    }
+     .content .desc{
+        margin: 0rem .5rem;
+    }
+
     .home .image, .image img{
-        width: 20rem;
-        height: 15rem;
+        width: 80%;
+        height: 35%;
+        margin: 0 10%;
     }
 
     .content-connect a{
@@ -504,7 +517,7 @@ footer a, footer i{
     
 }
 
-@media (max-width: 866px) {
+@media (max-width: 600px) {
     html{
         overflow-y: scroll;
         scrollbar-width: none;  
@@ -531,11 +544,11 @@ footer a, footer i{
     h1{
     padding: .5rem;
     display: inline;
-    font: 1em sans-serif;
+    font: 1.2rem sans-serif;
     }
 
     .nav h1{
-        font: 1.2em sans-serif;
+        font: 1.2rem sans-serif;
         margin-left: .5rem;
     }
 
@@ -583,14 +596,14 @@ footer a, footer i{
         margin: 7.5rem 0 0 0;
         font: .9em sans-serif;
     }
-
+    
     .content h1, .content .desc{
         margin: -2rem;
-        
+        margin-top: -5rem;        
     }
 
     .content h1{
-        font: 1em sans-serif;
+        font: 1.5em sans-serif;
     }
 
     .content .desc
@@ -612,9 +625,10 @@ footer a, footer i{
     }
 
     .home .image, .image img{
-        width: 18rem;
-        height: 12rem;
-        margin: .2rem;
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
+        margin-bottom: -2rem;
     }
 
     
